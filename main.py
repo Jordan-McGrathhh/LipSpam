@@ -59,16 +59,17 @@ data = {
         "userPath": userPath
         }
 
+#Update your proxies (This one is probably dead by now :/ )
 proxies = {
         
-        #"https": "76.76.76.74:53281"
-        
+        "https": "76.76.76.74:53281"
+       
         }
 
 requestAttempts = 0
 
 while(requestAttempts < numOfMessages):
-
+                                                                  #Update Proxies at Time of Use
     lipsiRequest = requests.post(url, headers=headers, json=data, proxies=proxies)
     print "[*] REQUEST " + str(requestAttempts + 1) + " SUCCESSFUL [*]"
 
